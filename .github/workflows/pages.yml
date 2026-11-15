@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - "index.html"
-      - "portfolio-assets.zip"
+      - "Jakeartspace-Portfolio-Assets.zip"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -32,10 +32,10 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/index.html
-          if [ -f portfolio-assets.zip ]; then
-            unzip -oq portfolio-assets.zip -d _site
+          if [ -f Jakeartspace-Portfolio-Assets.zip ]; then
+            unzip -oq Jakeartspace-Portfolio-Assets.zip -d _site
           else
-            echo "portfolio-assets.zip has not been uploaded yet."
+            echo "Jakeartspace-Portfolio-Assets.zip has not been uploaded yet."
           fi
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
